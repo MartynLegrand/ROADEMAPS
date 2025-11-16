@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ModuleCard from '../components/ModuleCard.astro';
+---
+
+<BaseLayout title="Jestfly - Platform for Creators">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-primary-600/10 border border-primary-600/20 rounded-full text-primary-500 text-sm font-medium mb-6">
+          🚀 Built with Astro.build + Orbit Design
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl font-bold text-dark-50 mb-6 leading-tight">
+          Plataforma Modular para
+          <span class="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">
+            Criadores de Conteúdo
+          </span>
+        </h1>
+        
+        <p class="text-xl text-dark-400 mb-8 leading-relaxed">
+          Uma arquitetura completa de microserviços com 13 módulos especializados, 
+          construída com TypeScript, Turborepo e as melhores práticas do mercado.
+        </p>
+        
+        <div class="flex items-center justify-center space-x-4">
+          <button class="btn btn-primary text-lg px-8 py-3">
+            Começar Agora
+          </button>
+          <button class="btn btn-secondary text-lg px-8 py-3">
+            Ver Documentação
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-4 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-50 mb-4">
+          Recursos Principais
+        </h2>
+        <p class="text-dark-400 text-lg">
+          Tudo que você precisa em uma única plataforma
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="card text-center">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-semibold text-dark-50 mb-2">Rápido e Modular</h3>
+          <p class="text-dark-400 text-sm">Arquitetura de microserviços que escala independentemente</p>
+        </div>
+
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="text-xl font-semibold text-dark-50 mb-2">Design Orbit</h3>
+          <p class="text-dark-400 text-sm">Interface moderna com padrões de design profissionais</p>
+        </div>
+
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🌙</div>
+          <h3 class="text-xl font-semibold text-dark-50 mb-2">Dark Mode Padrão</h3>
+          <p class="text-dark-400 text-sm">Interface otimizada para trabalho prolongado</p>
+        </div>
+
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="text-xl font-semibold text-dark-50 mb-2">AI Agents</h3>
+          <p class="text-dark-400 text-sm">Agentes especializados para cada módulo</p>
+        </div>
+
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🔒</div>
+          <h3 class="text-xl font-semibold text-dark-50 mb-2">Seguro</h3>
+          <p class="text-dark-400 text-sm">JWT, bcrypt, validação Zod em todas as camadas</p>
+        </div>
+
+        <div class="card text-center">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-semibold text-dark-50 mb-2">Analytics</h3>
+          <p class="text-dark-400 text-sm">Dashboard completo com insights em tempo real</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="container mx-auto px-4 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-50 mb-4">
+          13 Módulos Especializados
+        </h2>
+        <p class="text-dark-400 text-lg">
+          Cada módulo com agente AI especializado e documentação completa
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <ModuleCard 
+          title="Authentication"
+          description="JWT auth, registro, login, refresh tokens e OAuth2"
+          icon="🔐"
+          status="active"
+          href="/modules/auth"
+        />
+
+        <ModuleCard 
+          title="Users"
+          description="Gestão de perfis, busca, follow/unfollow e redes sociais"
+          icon="👥"
+          status="active"
+          href="/modules/users"
+        />
+
+        <ModuleCard 
+          title="Gateway"
+          description="API Gateway com roteamento, rate limiting e proxy"
+          icon="🌐"
+          status="active"
+          href="/modules/gateway"
+        />
+
+        <ModuleCard 
+          title="Notifications"
+          description="Notificações em tempo real via WebSocket e email"
+          icon="🔔"
+          status="development"
+          href="/modules/notifications"
+        />
+
+        <ModuleCard 
+          title="Wallet"
+          description="Carteira digital com transações e criptomoedas"
+          icon="💰"
+          status="development"
+          href="/modules/wallet"
+        />
+
+        <ModuleCard 
+          title="Community"
+          description="Gestão de comunidades com roles e permissões"
+          icon="👨‍👩‍👧‍👦"
+          status="development"
+          href="/modules/community"
+        />
+
+        <ModuleCard 
+          title="Store"
+          description="E-commerce completo com produtos físicos e digitais"
+          icon="🛍️"
+          status="planned"
+          href="/modules/store"
+        />
+
+        <ModuleCard 
+          title="NFT"
+          description="Marketplace de NFTs com mint, compra e venda"
+          icon="🎨"
+          status="planned"
+          href="/modules/nft"
+        />
+
+        <ModuleCard 
+          title="Streaming"
+          description="Live streaming com RTMP/HLS e chat integrado"
+          icon="📹"
+          status="planned"
+          href="/modules/streaming"
+        />
+
+        <ModuleCard 
+          title="Analytics"
+          description="Dashboard com métricas e insights detalhados"
+          icon="📊"
+          status="planned"
+          href="/modules/analytics"
+        />
+
+        <ModuleCard 
+          title="Career"
+          description="Portal de vagas para criadores e empresas"
+          icon="💼"
+          status="planned"
+          href="/modules/career"
+        />
+
+        <ModuleCard 
+          title="Admin"
+          description="Painel administrativo com moderação e configurações"
+          icon="⚙️"
+          status="planned"
+          href="/modules/admin"
+        />
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-4 py-20">
+      <div class="card max-w-4xl mx-auto text-center bg-gradient-to-r from-primary-600/10 to-primary-700/10 border-primary-600/20">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-50 mb-4">
+          Pronto para começar?
+        </h2>
+        <p class="text-dark-400 text-lg mb-8">
+          Clone o repositório e comece a desenvolver em minutos
+        </p>
+        <div class="flex items-center justify-center space-x-4">
+          <button class="btn btn-primary text-lg px-8 py-3">
+            Ver no GitHub
+          </button>
+          <button class="btn btn-secondary text-lg px-8 py-3">
+            Ler Documentação
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
