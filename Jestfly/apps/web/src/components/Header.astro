@@ -1,0 +1,39 @@
+---
+// Orbit-inspired header component
+---
+
+<header class="bg-dark-800 border-b border-dark-700 sticky top-0 z-50 backdrop-blur-lg bg-opacity-90">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-orbit flex items-center justify-center">
+          <span class="text-white font-bold text-xl">J</span>
+        </div>
+        <span class="text-xl font-bold text-dark-50">Jestfly</span>
+      </div>
+
+      <!-- Navigation -->
+      <div class="hidden md:flex items-center space-x-1">
+        <a href="/" class="nav-link nav-link-active">Home</a>
+        <a href="/features" class="nav-link">Features</a>
+        <a href="/modules" class="nav-link">Modules</a>
+        <a href="/docs" class="nav-link">Docs</a>
+        <a href="/about" class="nav-link">About</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex items-center space-x-3">
+        <button class="btn btn-secondary">Sign In</button>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-dark-300 hover:text-dark-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>

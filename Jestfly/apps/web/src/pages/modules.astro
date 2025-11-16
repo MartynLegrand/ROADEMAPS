@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ModuleCard from '../components/ModuleCard.astro';
+---
+
+<BaseLayout title="Modules - Jestfly">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-dark-50 mb-6">
+          13 Módulos
+          <span class="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">
+            Especializados
+          </span>
+        </h1>
+        
+        <p class="text-xl text-dark-400 mb-8">
+          Cada módulo é uma unidade independente com seu próprio agente AI especializado,
+          documentação completa e exemplos de código.
+        </p>
+      </div>
+    </section>
+
+    <!-- Modules Grid -->
+    <section class="container mx-auto px-4 pb-20">
+      <div class="max-w-7xl mx-auto">
+        <!-- Active Modules -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-dark-50 mb-6 flex items-center">
+            <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+            Módulos Ativos
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ModuleCard 
+              title="Authentication"
+              description="JWT auth, registro, login, refresh tokens e OAuth2. Inclui bcrypt, 2FA e proteções de segurança."
+              icon="🔐"
+              status="active"
+              href="/modules/auth"
+            />
+
+            <ModuleCard 
+              title="Users"
+              description="Gestão completa de usuários com perfis, busca, follow/unfollow e configurações de privacidade."
+              icon="👥"
+              status="active"
+              href="/modules/users"
+            />
+
+            <ModuleCard 
+              title="Gateway"
+              description="API Gateway centralizado com roteamento inteligente, rate limiting e balanceamento de carga."
+              icon="🌐"
+              status="active"
+              href="/modules/gateway"
+            />
+          </div>
+        </div>
+
+        <!-- Development Modules -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-dark-50 mb-6 flex items-center">
+            <span class="w-3 h-3 bg-yellow-500 rounded-full mr-3"></span>
+            Em Desenvolvimento
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ModuleCard 
+              title="Notifications"
+              description="Sistema de notificações em tempo real com WebSocket, push notifications e email templates."
+              icon="🔔"
+              status="development"
+              href="/modules/notifications"
+            />
+
+            <ModuleCard 
+              title="Wallet"
+              description="Carteira digital com suporte a transações, criptomoedas e integração com blockchains."
+              icon="💰"
+              status="development"
+              href="/modules/wallet"
+            />
+
+            <ModuleCard 
+              title="Community"
+              description="Gestão de comunidades com roles, permissões, moderação e ferramentas de engajamento."
+              icon="👨‍👩‍👧‍👦"
+              status="development"
+              href="/modules/community"
+            />
+          </div>
+        </div>
+
+        <!-- Planned Modules -->
+        <div>
+          <h2 class="text-2xl font-bold text-dark-50 mb-6 flex items-center">
+            <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+            Planejados
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ModuleCard 
+              title="Store"
+              description="E-commerce completo com gestão de produtos, carrinho, checkout e integração de pagamentos."
+              icon="🛍️"
+              status="planned"
+              href="/modules/store"
+            />
+
+            <ModuleCard 
+              title="NFT"
+              description="Marketplace de NFTs com mint, compra, venda e integração com smart contracts."
+              icon="🎨"
+              status="planned"
+              href="/modules/nft"
+            />
+
+            <ModuleCard 
+              title="Streaming"
+              description="Live streaming com RTMP/HLS, chat em tempo real e gravação de VODs."
+              icon="📹"
+              status="planned"
+              href="/modules/streaming"
+            />
+
+            <ModuleCard 
+              title="Analytics"
+              description="Dashboard completo com métricas, insights e relatórios personalizados."
+              icon="📊"
+              status="planned"
+              href="/modules/analytics"
+            />
+
+            <ModuleCard 
+              title="Career"
+              description="Portal de vagas com gestão de candidaturas, matching e pipeline de contratação."
+              icon="💼"
+              status="planned"
+              href="/modules/career"
+            />
+
+            <ModuleCard 
+              title="Admin"
+              description="Painel administrativo com moderação, configurações e monitoramento do sistema."
+              icon="⚙️"
+              status="planned"
+              href="/modules/admin"
+            />
+
+            <ModuleCard 
+              title="Demos/Content"
+              description="Gestão de conteúdo com upload, processamento, metadata e sistema de recomendações."
+              icon="🎬"
+              status="planned"
+              href="/modules/demos"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Agents Section -->
+    <section class="container mx-auto px-4 pb-20">
+      <div class="card max-w-4xl mx-auto bg-gradient-to-r from-purple-600/10 to-purple-700/10 border-purple-600/20">
+        <div class="flex items-start space-x-4">
+          <div class="text-4xl">🤖</div>
+          <div>
+            <h2 class="text-2xl font-bold text-dark-50 mb-2">
+              Agentes AI Especializados
+            </h2>
+            <p class="text-dark-400 mb-4">
+              Cada módulo possui um agente AI treinado especificamente para ajudar no desenvolvimento,
+              troubleshooting e otimização. Os agentes conhecem profundamente a arquitetura, 
+              melhores práticas e podem sugerir implementações.
+            </p>
+            <a href="/docs/agents" class="btn btn-primary">
+              Ver Documentação dos Agentes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="container mx-auto px-4 pb-20">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-dark-50 mb-8 text-center">
+          Arquitetura Modular
+        </h2>
+        
+        <div class="card">
+          <div class="space-y-4 text-dark-400">
+            <p>
+              <strong class="text-dark-50">Microserviços Independentes:</strong> 
+              Cada módulo é um microserviço completo que pode ser desenvolvido, testado e 
+              deployado independentemente.
+            </p>
+            
+            <p>
+              <strong class="text-dark-50">Shared Packages:</strong> 
+              Types, validations, UI components e API client são compartilhados entre todos
+              os módulos para garantir consistência.
+            </p>
+            
+            <p>
+              <strong class="text-dark-50">API Gateway:</strong> 
+              Ponto de entrada único que roteia requisições para os módulos apropriados,
+              gerencia autenticação e rate limiting.
+            </p>
+            
+            <p>
+              <strong class="text-dark-50">Database Schema:</strong> 
+              Esquema PostgreSQL completo com 20+ tabelas, UUIDs, JSONB e índices otimizados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

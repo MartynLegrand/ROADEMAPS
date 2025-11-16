@@ -1,0 +1,68 @@
+---
+// Orbit-inspired footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-dark-800 border-t border-dark-700 mt-20">
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="col-span-1 md:col-span-1">
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-orbit flex items-center justify-center">
+            <span class="text-white font-bold">J</span>
+          </div>
+          <span class="text-lg font-bold text-dark-50">Jestfly</span>
+        </div>
+        <p class="text-dark-400 text-sm">
+          A comprehensive modular platform for content creators and communities.
+        </p>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h3 class="font-semibold text-dark-50 mb-4">Product</h3>
+        <ul class="space-y-2">
+          <li><a href="/features" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Features</a></li>
+          <li><a href="/pricing" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Pricing</a></li>
+          <li><a href="/modules" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Modules</a></li>
+          <li><a href="/roadmap" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Developers -->
+      <div>
+        <h3 class="font-semibold text-dark-50 mb-4">Developers</h3>
+        <ul class="space-y-2">
+          <li><a href="/docs" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Documentation</a></li>
+          <li><a href="/api" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">API Reference</a></li>
+          <li><a href="/github" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">GitHub</a></li>
+          <li><a href="/agents" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">AI Agents</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="font-semibold text-dark-50 mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="/about" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">About</a></li>
+          <li><a href="/blog" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Blog</a></li>
+          <li><a href="/contact" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Contact</a></li>
+          <li><a href="/careers" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-12 pt-8 border-t border-dark-700 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-dark-400 text-sm">
+        © {currentYear} Jestfly. All rights reserved.
+      </p>
+      <div class="flex items-center space-x-6 mt-4 md:mt-0">
+        <a href="/privacy" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Privacy</a>
+        <a href="/terms" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Terms</a>
+        <a href="/security" class="text-dark-400 hover:text-primary-500 text-sm transition-colors">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>

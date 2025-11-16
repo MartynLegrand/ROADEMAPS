@@ -1,0 +1,50 @@
+---
+// Orbit-inspired module card component
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  status: 'active' | 'development' | 'planned';
+  href?: string;
+}
+
+const { title, description, icon, status, href = '#' } = Astro.props;
+
+const statusColors = {
+  active: 'bg-green-500/10 text-green-500 border-green-500/20',
+  development: 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20',
+  planned: 'bg-blue-500/10 text-blue-500 border-blue-500/20'
+};
+
+const statusLabels = {
+  active: 'Active',
+  development: 'In Development',
+  planned: 'Planned'
+};
+---
+
+<a href={href} class="card hover:border-primary-600 transition-all duration-300 group hover:shadow-orbit-lg">
+  <div class="flex items-start justify-between mb-4">
+    <div class="w-12 h-12 bg-primary-600/10 rounded-orbit flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+      {icon}
+    </div>
+    <span class={`px-3 py-1 rounded-full text-xs font-medium border ${statusColors[status]}`}>
+      {statusLabels[status]}
+    </span>
+  </div>
+  
+  <h3 class="text-xl font-semibold text-dark-50 mb-2 group-hover:text-primary-500 transition-colors">
+    {title}
+  </h3>
+  
+  <p class="text-dark-400 text-sm leading-relaxed">
+    {description}
+  </p>
+  
+  <div class="mt-4 flex items-center text-primary-500 text-sm font-medium group-hover:translate-x-1 transition-transform">
+    Learn more 
+    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </div>
+</a>
